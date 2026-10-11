@@ -104,7 +104,7 @@
 
                 async function loadInquiries() {
 
-                    const res = await fetch("http://localhost:5000/admin/inquiries");
+                    const res = await fetch("https://studious-hostel.onrender.com/admin/inquiries");
 
                     const data = await res.json();
 
@@ -126,7 +126,7 @@
                     const confirmDelete = confirm("Delete this inquiry?");
                     if (!confirmDelete) return;
 
-                    await fetch(`http://localhost:5000/admin/inquiries/${id}`, {
+                    await fetch(`https://studious-hostel.onrender.com/admin/inquiries/${id}`, {
                         method: "DELETE"
                     });
 
@@ -136,7 +136,7 @@
 
                 async function markContacted(id) {
 
-                    await fetch(`http://localhost:5000/admin/inquiries/${id}`, {
+                    await fetch(`https://studious-hostel.onrender.com/admin/inquiries/${id}`, {
                         method: "PUT"
                     });
 
